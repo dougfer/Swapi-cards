@@ -1,0 +1,18 @@
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFE81F;
+
+  h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 50px;
+  }
+}
