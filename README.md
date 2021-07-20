@@ -14,3 +14,6 @@
 - ```npm install ```
 
 -- ```npm start``` para iniciar a aplicação.
+
+
+Publicado em: https://kind-goldwasser-be8b58.netlify.app/
