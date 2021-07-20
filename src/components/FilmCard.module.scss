@@ -9,4 +9,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   box-shadow: 0 0 5px orange;
+  transition: all 0.3s;
+
+}
+
+.mainCard:hover {
+  margin-top: 10px;
+  box-shadow: 0 0 15px orange;
+  cursor: pointer;
 }

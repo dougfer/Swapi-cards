@@ -1,15 +1,34 @@
 import Styles from './PeopleCard.module.scss';
-import bob from '../Images/bob.png';
-
+import Modal from '@material-ui/core/Modal';
+import { useState } from 'react';
+import PeopleModal from './PeopleModal';
 
 function PeopleCard({data}) {
 
+  const [modalOpen, setOpen ] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return(
-    <div className={Styles.card}>
-      <h3>{data.name}</h3>
-      <img src={bob } alt="Character" />
-      <p>{`Data de nascimento: ${data.birth_year}`}</p>
-      <p>{ data.gender !== "n/a" && `Sexo: ${data.gender}`}</p>
+    <div>
+      <div className={Styles.card} onClick={() => handleOpen()} >
+        <h3>{data.name}</h3>
+        <p>{`Data de nascimento: ${data.birth_year}`}</p>
+        <p>{ data.gender !== "n/a" && `Sexo: ${data.gender}`}</p>
+      </div>
+      <Modal
+        open={modalOpen}
+        onClose={handleClose}
+      >
+        <PeopleModal close={handleClose} data={data} />
+      </Modal>
     </div>
   )
 }

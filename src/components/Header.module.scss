@@ -37,3 +37,49 @@
     }
   }
 }
+
+
+.buttonMenu {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  font-size: 15px;
+  margin-bottom: 5px ;
+}
+
+.menuIcon {
+  background-color: white;
+  margin-right:15px;
+  display: none;
+  cursor: not-allowed;
+  opacity: 0;
+}
+
+@media screen and (max-width: 930px) {
+  .header {
+    nav {
+      
+      button {
+        font-size: 10px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    nav {
+      display: none;
+    }
+  }
+
+  .menuIcon {
+    opacity: 1;
+    cursor: pointer;
+
+  }
+
+
+}

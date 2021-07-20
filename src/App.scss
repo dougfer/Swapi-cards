@@ -5,9 +5,10 @@
 }
 
 .main {
-  background: url('./Images/background2.jpg');
+  background: url('./Images/background2.jpg') repeat-y;
+  background-size: cover;
+  position: fixed;
   height: 100%;
   width: 100%;
-  position: absolute;
-  background-size: cover;
+  overflow-y: auto;
 }

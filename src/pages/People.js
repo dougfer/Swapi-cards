@@ -13,24 +13,25 @@ function People() {
   const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
   const urlText = history.location.pathname.split('/')[1];
+  
 
   const getPeople = async () => {
     const results = await fetchData(urlText);
     setPeople(results);
     setIsLoading(false);
-  };
+  }
 
+  useEffect(() => {
+   getPeople();
+  }, [])
 
-  useEffect( () => {
-    getPeople();
-  },[]);
 
   return (
     <div>
       <Header />
       <div className={Styles.topic}>
         <h1>{urlText}</h1>
-        {renderOrder(people, setOrder, setPeople)}
+      {renderOrder(people, setOrder, setPeople)}
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}

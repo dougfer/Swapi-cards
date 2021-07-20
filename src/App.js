@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import './App.scss';
 import Films from './pages/Films';
@@ -9,6 +10,11 @@ import Starships from './pages/Starships';
 import Vehicles from './pages/Vehicles';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Swapi Cards"
+  }, [])
+
   return(
     <div className="main">
       <Switch>
