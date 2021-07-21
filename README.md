@@ -16,4 +16,4 @@
 -- ```npm start``` para iniciar a aplicação.
 
 
-Publicado em: https://kind-goldwasser-be8b58.netlify.app/
+Publicado em: https://swapi-cards.netlify.app/
