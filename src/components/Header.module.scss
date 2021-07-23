@@ -51,9 +51,7 @@
 .menuIcon {
   background-color: white;
   margin-right:15px;
-  display: none;
-  cursor: not-allowed;
-  opacity: 0;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 930px) {
@@ -76,7 +74,7 @@
   }
 
   .menuIcon {
-    opacity: 1;
+    visibility: visible;
     cursor: pointer;
 
   }

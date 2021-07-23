@@ -52,15 +52,8 @@ const renderOrder = (array, callback1, callback2) => {
   )
 }
 
-
-// Função genérica para a renderização da lista de cards
-const renderCards = (array, Card) => {
-  return array.map((item, index) => <Card data={item} key={index} />)
-};
-
 export {
   fetchData,
   renderOrder,
-  renderCards
 }
   
