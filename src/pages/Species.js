@@ -4,7 +4,7 @@ import GenericCard from "../components/GenericCard";
 import Header from "../components/Header";
 import Loading from '../components/Loading';
 import { fetchData, renderOrder } from '../Services';
-import Styles from './Species.module.scss';
+import Styles from "./Pages.module.scss"
 
 
 function Species() {

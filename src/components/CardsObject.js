@@ -21,7 +21,7 @@ const obj = {
   },
   species: {
     name: 'Nome',
-    classificaction: 'Classificação',
+    classification: 'Classificação',
     designation: 'Designação'
   },
   planets: {

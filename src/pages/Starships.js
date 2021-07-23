@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import Loading from '../components/Loading';
 import { fetchData, renderOrder } from '../Services';
 import Header from "../components/Header";
-import Styles from './Starships.module.scss';
+import Styles from "./Pages.module.scss"
 import GenericCard from "../components/GenericCard";
 
 

@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import Header from "../components/Header";
 import { fetchData, renderOrder } from '../Services';
 import Loading from '../components/Loading';
-import Styles from './Vehicles.module.scss';
+import Styles from "./Pages.module.scss"
 import GenericCard from "../components/GenericCard";
 
 

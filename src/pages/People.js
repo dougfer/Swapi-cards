@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "../components/Header";
 import Loading from '../components/Loading';
-import Styles from "./People.module.scss"
+import Styles from "./Pages.module.scss"
 import { fetchData, renderOrder } from '../Services';
 import GenericCard from "../components/GenericCard";
 
