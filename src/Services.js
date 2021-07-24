@@ -43,7 +43,7 @@ const renderOrder = (array, callback1, callback2) => {
   return (
     <div>
       Classificar:
-      <select style={{"margin-left": "10px"}} onChange={(e) => orderAll(e.target.value, array, callback1, callback2)}>
+      <select style={{"marginLeft": "10px"}} onChange={(e) => orderAll(e.target.value, array, callback1, callback2)}>
         <option value=" " disabled hidden selected></option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>

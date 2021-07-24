@@ -33,7 +33,7 @@ function GenericCard({page, data}) {
         onClose={handleClose}
 
       >
-        <GenericModal close={handleClose} data={data} page={page} />
+        <GenericModal close={handleClose} key={data[arr[0][0]]} data={data} page={page} />
       </Modal>
     </div>
   )

@@ -13,7 +13,6 @@ function People() {
   const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
   const urlText = history.location.pathname.split('/')[1];
-  
 
   const getPeople = async () => {
     const results = await fetchData(urlText);
