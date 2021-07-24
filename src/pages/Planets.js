@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { fetchData, renderOrder, renderCards } from '../Services';
+import { fetchData, renderOrder } from '../Services';
 import Loading from '../components/Loading';
 import Header from "../components/Header";
-import PlanetCard from "../components/PlanetCard";
-import Styles from './Planets.module.scss';
+import Styles from "./Pages.module.scss"
+import GenericCard from "../components/GenericCard";
 
 function Planets() {
 
@@ -33,7 +33,7 @@ function Planets() {
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}
-        {renderCards(planets, PlanetCard)}
+        {planets.map((data,index) => <GenericCard page={urlText} key={index} data={data} />)}
       </div>
     </div>
   )

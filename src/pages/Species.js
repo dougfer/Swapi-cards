@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import GenericCard from "../components/GenericCard";
 import Header from "../components/Header";
 import Loading from '../components/Loading';
-import SpecieCard from "../components/SpecieCard";
-import { fetchData, renderOrder, renderCards } from '../Services';
-import Styles from './Species.module.scss';
+import { fetchData, renderOrder } from '../Services';
+import Styles from "./Pages.module.scss"
 
 
 function Species() {
@@ -34,7 +34,7 @@ function Species() {
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}
-        {renderCards(species, SpecieCard)}
+        {species.map((data,index) => <GenericCard page={urlText} key={index} data={data} />)}
       </div>
     </div>
   )

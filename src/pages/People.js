@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "../components/Header";
 import Loading from '../components/Loading';
-import PeopleCard from "../components/PeopleCard";
-import Styles from "./People.module.scss"
-import { fetchData, renderOrder, renderCards } from '../Services';
+import Styles from "./Pages.module.scss"
+import { fetchData, renderOrder } from '../Services';
+import GenericCard from "../components/GenericCard";
 
 function People() {
 
@@ -13,7 +13,6 @@ function People() {
   const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
   const urlText = history.location.pathname.split('/')[1];
-  
 
   const getPeople = async () => {
     const results = await fetchData(urlText);
@@ -35,7 +34,7 @@ function People() {
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}
-        {renderCards(people, PeopleCard)}
+        {people.map((data,index) => <GenericCard page={urlText} key={index} data={data} />)}
       </div>
 
     </div>

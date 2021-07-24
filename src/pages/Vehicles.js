@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "../components/Header";
-import { fetchData, renderOrder, renderCards } from '../Services';
+import { fetchData, renderOrder } from '../Services';
 import Loading from '../components/Loading';
-import VehicleCard from "../components/VehicleCard";
-import Styles from './Vehicles.module.scss';
+import Styles from "./Pages.module.scss"
+import GenericCard from "../components/GenericCard";
 
 
 function Vehicles() {
@@ -34,7 +34,7 @@ function Vehicles() {
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}
-        {renderCards(vehicles, VehicleCard)}
+        {vehicles.map((data,index) => <GenericCard page={urlText} key={index} data={data} />)}
       </div>
     </div>
   )

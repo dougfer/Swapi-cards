@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Loading from '../components/Loading';
-import { fetchData, renderOrder, renderCards } from '../Services';
+import { fetchData, renderOrder } from '../Services';
 import Header from "../components/Header";
-import StarshipCard from "../components/StarshipCard";
-import Styles from './Starships.module.scss';
+import Styles from "./Pages.module.scss"
+import GenericCard from "../components/GenericCard";
 
 
 function Starships() {
@@ -34,7 +34,8 @@ function Starships() {
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}
-        {renderCards(starships, StarshipCard)}
+        {starships.map((data,index) => <GenericCard page={urlText} key={index} data={data} />)}
+
       </div>
     </div>
   )

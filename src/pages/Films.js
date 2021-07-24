@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "../components/Header";
-import {fetchData, renderCards, renderOrder} from '../Services';
+import {fetchData, renderOrder} from '../Services';
 import Loading from "../components/Loading";
-import FilmCard from "../components/FilmCard";
-import Styles from './Films.module.scss';
+import Styles from "./Pages.module.scss"
+import GenericCard from "../components/GenericCard";
 
 function Films () {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +32,9 @@ function Films () {
       </div>
       <div className={Styles.mainContainer}>
         {isLoading && <Loading />}
-        {renderCards(films, FilmCard)}
+        {films.map((data,index) => <GenericCard page={urlText} key={index} data={data} />)}
+
+
       </div>
     </div>
   )
